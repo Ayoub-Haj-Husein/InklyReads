@@ -1279,7 +1279,7 @@ span.author {
   margin-bottom: 40px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 666px) {
   div#aboutus {
     margin-top: 200%;
   }
