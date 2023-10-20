@@ -571,8 +571,8 @@
     {
       "firstName": "ayoub",
       "lastName": "Husein",
-      "userName": "ayoub 0",
-      "email": "ayou0000b@gmaile.com",
+      "userName": "mothana",
+      "email": "mothana@gmail.com",
       "password": "123456",
       "address": "zarqa",
       "agree": "on",
@@ -607,17 +607,6 @@
       "address": "",
       "agree": "on",
       "id": 5
-    },
-    {
-      "firstName": "ayoub",
-      "lastName": "Husein",
-      "userName": "ayoub Husein",
-      "email": "0000ulrahmanhusein@gmail.com",
-      "password": "123456",
-      "confirmPassword": "12345",
-      "address": "12345",
-      "agree": "advadv",
-      "id": 6
     }
   ],
   "comments": [
@@ -662,20 +651,6 @@
       "id": 11,
       "booknumber": "3",
       "comment": "goos book",
-      "useremail": "from--section",
-      "username": "fromsession"
-    },
-    {
-      "id": 12,
-      "booknumber": "null",
-      "comment": "good book \n",
-      "useremail": "from--section",
-      "username": "fromsession"
-    },
-    {
-      "id": 13,
-      "booknumber": "null",
-      "comment": "good book \n",
       "useremail": "from--section",
       "username": "fromsession"
     }

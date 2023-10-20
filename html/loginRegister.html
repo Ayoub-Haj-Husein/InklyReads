@@ -19,11 +19,6 @@
           <i class="fa-solid fa-book"></i>
           InklyReads
         </a>
-        <div class="group">
-          <ul class="navigation">
-            <li><a href="../index.html">Home</a></li>
-          </ul>
-        </div>
       </nav>
     </header>
     <section id="background">
@@ -97,16 +92,15 @@
           <input
             type="password"
             placeholder="Confirm Password"
-            name="confirmPassword"
-            id="confirmPassword"
+            name="password"
             class="input-field"
+            id="confirmPassword"
             required
           />
           <input
             type="text"
             class="input-field"
             placeholder="Your Address"
-            id="inputCP"
             name="address"
             required
           />
@@ -123,6 +117,61 @@
         </form>
       </div>
     </section>
+    <footer>
+      <div class="footer-info">
+        <div class="footer-whidth-about">
+          <h2>Inkly Reads</h2>
+          <p>
+            our collection has something for every reader. Explore, read, and
+            embark on endless literary journeys with you
+          </p>
+          <div class="sochial-medea">
+            <ul>
+              <li>
+                <a
+                  href="https://www.facebook.com/people/Inkly-Reads/pfbid02n4CRZAdi7GytD45BvB4qCdsaxP2ihGjYhcMDqDJ8bmr1RbvuiCJpWkqqSCeVYM8zl/"
+                  ><i class="fa-brands fa-facebook-f"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://twitter.com/i/flow/login?redirect_after_login=%2FInklyReads"
+                  ><i class="fa-brands fa-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-whidth-link">
+          <h2>Quik links</h2>
+          <ul>
+            <li><a href="#aboutus">About</a></li>
+            <li><a href="#catigoris">Catigore</a></li>
+            <li><a href="html/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-whidth-contact">
+          <h2>Contact</h2>
+          <ul>
+            <li>
+              <p>Jordan Amman</p>
+            </li>
+            <li>
+              <a href="#">inkiyreads@gmail.com</a>
+            </li>
+            <li>
+              <p>000 123 456</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="copy-right">
+        <p>&copy,Inkly Reads . 2023</p>
+      </div>
+    </footer>
     <section id="termAndConditions">
       <div class="terms-box">
         <div class="terms-text">
@@ -226,72 +275,6 @@
         </div>
       </div>
     </section>
-    <nav>
-      <a href="../index.html" class="name">
-        <i class="fa-solid fa-book"></i>
-        InklyReads
-      </a>
-      <div class="group">
-        <ul class="navigation">
-          <li><a href="../index.html">Home</a></li>
-        </ul>
-      </div>
-    </nav>
-    <footer>
-      <div class="footer-info">
-        <div class="footer-whidth-about">
-          <h2>Inkly Reads</h2>
-          <p>
-            our collection has something for every reader. Explore, read, and
-            embark on endless literary journeys with you
-          </p>
-          <div class="sochial-medea">
-            <ul>
-              <li>
-                <a
-                  href="https://www.facebook.com/people/Inkly-Reads/pfbid02n4CRZAdi7GytD45BvB4qCdsaxP2ihGjYhcMDqDJ8bmr1RbvuiCJpWkqqSCeVYM8zl/"
-                  ><i class="fa-brands fa-facebook-f"></i
-                ></a>
-              </li>
-              <li>
-                <a
-                  href="https://twitter.com/i/flow/login?redirect_after_login=%2FInklyReads"
-                  ><i class="fa-brands fa-twitter"></i
-                ></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer-whidth-link">
-          <h2>Quik links</h2>
-          <ul>
-            <li><a href="#aboutus">About</a></li>
-            <li><a href="#catigoris">Catigore</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-whidth-contact">
-          <h2>Contact</h2>
-          <ul>
-            <li>
-              <p>Jordan Amman</p>
-            </li>
-            <li>
-              <a href="#">inkiyreads@gmail.com</a>
-            </li>
-            <li>
-              <p>078 1212 321</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="copy-right">
-        <p>&copy,Inkly Reads . 2023</p>
-      </div>
-    </footer>
     <script type="module">
       // initialize App and methods me used start
       import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
@@ -340,12 +323,12 @@
           document.getElementById("registerForm").elements[3].value;
         let confirmPassword =
           document.getElementById("registerForm").elements[4].value;
-        let address = document.getElementById("registerForm").elements[6].value;
-        let agree = document.getElementById("registerForm").elements[7].value;
+        let address = document.getElementById("registerForm").elements[5].value;
+        let agree = document.getElementById("registerForm").elements[6].value;
         // giv me all values for registerForm end
         if (password !== confirmPassword) {
-          alert("The password is not equal");
-          return;
+          alert("Password is not equal to confirm password");
+          return; 
         }
         createUserWithEmailAndPassword(auth, email, password)
           .then((credentials) => {
@@ -354,7 +337,6 @@
               lastName: lastName,
               email: email,
               password: password,
-              confirmPassword: confirmPassword,
               address: address,
               agree: agree,
             });
@@ -371,12 +353,10 @@
                   document.getElementById("registerForm").elements[2].value;
                 let password =
                   document.getElementById("registerForm").elements[3].value;
-                let confirmPassword =
-                  document.getElementById("registerForm").elements[4].value;
                 let address =
-                  document.getElementById("registerForm").elements[5].value;
+                  document.getElementById("registerForm").elements[4].value;
                 let agree =
-                  document.getElementById("registerForm").elements[6].value;
+                  document.getElementById("registerForm").elements[5].value;
                 fetch("http://localhost:3000/users", {
                   method: "POST",
                   headers: {
@@ -388,7 +368,6 @@
                     userName: `${firstName} ${lastName}`,
                     email: email,
                     password: password,
-                    confirmPassword: confirmPassword,
                     address: address,
                     agree: agree,
                   }),
@@ -441,6 +420,5 @@
       // Sign In User end
     </script>
     <script src="../js/loginRegister.js"></script>
-    <script src="../js/app.js"></script>
   </body>
 </html>
