@@ -293,13 +293,13 @@
       // initialize App and methods me used end
 
       const firebaseConfig = {
-        apiKey: "AIzaSyD0q1Gw6cNmcLBE3y4jeY5KpswMMQ-ls00",
-        authDomain: "inklyreads-2529f.firebaseapp.com",
-        databaseURL: "https://inklyreads-2529f-default-rtdb.firebaseio.com/",
-        projectId: "inklyreads-2529f",
-        storageBucket: "inklyreads-2529f.appspot.com",
-        messagingSenderId: "781978896762",
-        appId: "1:781978896762:web:5ddba45622e4fd52abeec3",
+        apiKey: "AIzaSyAKSjRe0Bd-HDLyVvuPvegmqm-OeSBdQZY",
+        authDomain: "inkly-reads.firebaseapp.com",
+        projectId: "inkly-reads",
+        storageBucket: "inkly-reads.appspot.com",
+        messagingSenderId: "30915602370",
+        appId: "1:30915602370:web:cd96b36ffdd14c028e985b",
+        measurementId: "G-5X0VCG7Y3G"
       };
 
       // Initialize Firebase start
@@ -386,6 +386,7 @@
 
       // Sign In User start
       let SignInUser = (event) => {
+        console.log("SignInUser function executed");
         event.preventDefault();
         let email = document.getElementById("loginForm").elements[0].value;
         let password = document.getElementById("loginForm").elements[1].value;
@@ -417,7 +418,6 @@
           });
       };
       loginForm.addEventListener("submit", SignInUser);
-      // Sign In User end
     </script>
     <script src="../js/loginRegister.js"></script>
   </body>
